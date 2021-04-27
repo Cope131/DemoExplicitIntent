@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (hero != null) {
             intent.putExtra("hero", hero);
+            Log.e(TAG, hero.getClass().getSimpleName());
 //            startActivity(intent);
             startActivityForResult(intent, request_code);
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,67 +7,94 @@
     android:layout_height="match_parent"
     tools:context=".HeroStatsActivity"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:gravity="bottom">
+    android:padding="20dp">
 
-    <TextView
+    <!-- Title -->
+
+
+    <!-- Hero Stats -->
+    <LinearLayout
+        android:id="@+id/hero_stats"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingBottom="5dp"
-        android:text="Name"
-        style="@style/label"/>
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
 
-    <TextView
-        android:id="@+id/name_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
-        android:paddingHorizontal="20dp"
-        android:text="Name"
-        style="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+        <!-- Title -->
+        <TextView
+            android:id="@+id/stats_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stats"
+            android:textSize="30sp"
+            android:padding="20dp"
+            style="@style/Title"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingBottom="5dp"
-        android:text="Strength"
-        style="@style/label"/>
+        <!-- Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="5dp"
+            android:text="Name"
+            style="@style/label"/>
 
-    <TextView
-        android:id="@+id/strength_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
-        android:paddingHorizontal="20dp"
-        android:text="Strength"
-        style="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+        <TextView
+            android:id="@+id/name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingHorizontal="20dp"
+            android:text="Name"
+            style="@style/Description"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingBottom="5dp"
-        android:text="Technical Prowess"
-        style="@style/label"/>
+        <!-- Strength -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="5dp"
+            android:text="Strength"
+            style="@style/label"/>
 
-    <TextView
-        android:id="@+id/technical_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
-        android:paddingHorizontal="20dp"
-        android:text="Technical"
-        style="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+        <TextView
+            android:id="@+id/strength_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingHorizontal="20dp"
+            android:text="Strength"
+            style="@style/Description"/>
 
+        <!-- Technical Prowess -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="5dp"
+            android:text="Technical Prowess"
+            style="@style/label"/>
+
+        <TextView
+            android:id="@+id/technical_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingHorizontal="20dp"
+            android:text="Technical"
+            style="@style/Description"/>
+
+    </LinearLayout>
+
+    <!-- Like / Dislike Buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="20dp"
         android:gravity="end"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="100dp"
+        android:layout_alignParentBottom="true">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/like_button"
@@ -81,7 +108,6 @@
             android:layout_height="wrap_content"
             android:text="Dislike"/>
 
-
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

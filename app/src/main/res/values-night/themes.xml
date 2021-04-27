@@ -15,7 +15,18 @@
     </style>
 
     <style name="label" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white_60</item>
+    </style>
+
+    <style name="Description">
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/white_80</item>
     </style>
+
+    <style name="Title">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/white_80</item>
+    </style>
+
 </resources>
